@@ -46,7 +46,6 @@ export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
     const onIndicatorHandler = ()=>{
         setOnOffIndicator(!onOffIndicator)
     }
-
     const offIndicatorHandler = ()=>{
         setOnOffIndicator(!onOffIndicator)
     }
@@ -57,7 +56,5 @@ export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
             <div onClick={offIndicatorHandler} style={offIndicator}>Off</div>
             <div style={indicatorStyle} ></div>
         </div>
-
-
     );
 };
