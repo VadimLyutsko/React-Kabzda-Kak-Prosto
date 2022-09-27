@@ -3,6 +3,8 @@ import './App.css';
 import Accordion from './Components/Accordion';
 import {Rating} from './Components/Rating';
 import {OnnOff} from './Components/OnnOff';
+import UnControlledAccordion from './Components/UnControlledAccordion';
+import {UnControlledRating} from './Components/UnControlledRating';
 
 
 type PageTitlePropsType = {
@@ -12,17 +14,22 @@ type PageTitlePropsType = {
 function App() {
     return (
         <div className="App">
-            <Accordion titleValue={'Accordion-title # 1'} collapsed={true}/>
-            <Accordion titleValue={'Accordion-title # 2'} collapsed={false}/>
+            {/*<Accordion titleValue={'Accordion-title # 1'} collapsed={true}/>*/}
+            {/*<Accordion titleValue={'Accordion-title # 2'} collapsed={false}/>*/}
+            <UnControlledAccordion titleValue={'Accordion-title # 2'} />
 
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <UnControlledRating value={0}/>
+
+
+            {/*<Rating value={0}/>*/}
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
 
             <OnnOff indicator={true}/>
+            {/*<OnnOff indicator={false}/>*/}
             {/*<OnnOff indicator={false}/>*/}
 
         </div>
