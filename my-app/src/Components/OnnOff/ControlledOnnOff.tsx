@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import styles from './OnnOff.module.css';
+import React from 'react';
 
 type  onnOffProps = {
     indicator: boolean
+    callBack:(IsButtonControlled:boolean)=>void
 }
 
-export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
+export const ControlledOnnOff = ( props:onnOffProps) => {
 
-    const[onOffIndicator,setOnOffIndicator] = useState<boolean>(true);
+
 
 
     const onIndicator={
         marginLeft:'5px',
         width: "30px",
         height: "30px",
-        backgroundColor: onOffIndicator? "yellowgreen":"white",
+        backgroundColor: props.indicator? "yellowgreen":"white",
         border:"solid 1px black",
         display:'inline-block'
     }
@@ -22,7 +22,7 @@ export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
         marginLeft:'5px',
         width: "30px",
         height: "30px",
-        backgroundColor: !onOffIndicator? "rebeccapurple":"white",
+        backgroundColor: !props.indicator? "rebeccapurple":"white",
         border:"solid 1px black",
         display:'inline-block'
     }
@@ -32,7 +32,7 @@ export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
         height: "15px",
         borderRadius: "15px",
         border:"solid 1px black",
-        backgroundColor: onOffIndicator? "yellowgreen":"rebeccapurple",
+        backgroundColor: props.indicator? "yellowgreen":"rebeccapurple",
         display:'inline-block'
     }
     const containerStyle = {
@@ -44,15 +44,16 @@ export const OnnOff: React.FC<onnOffProps> = ( indicator) => {
     }
 
     const onIndicatorHandler = ()=>{
-        setOnOffIndicator(!onOffIndicator)
+
+        props.callBack(!props.indicator)
     }
     const offIndicatorHandler = ()=>{
-        setOnOffIndicator(!onOffIndicator)
+        props.callBack(!props.indicator)
     }
 
     return (
         <div style={containerStyle}>
-            <div onClick={onIndicatorHandler}  style={onIndicator}>Onn</div>
+            <div  onClick={onIndicatorHandler}  style={onIndicator}>Onn</div>
             <div onClick={offIndicatorHandler} style={offIndicator}>Off</div>
             <div style={indicatorStyle} ></div>
         </div>
