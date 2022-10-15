@@ -3,7 +3,7 @@ import styles from './Rating.module.css';
 
 export type ratingValueType = 1 | 2 | 3 | 4 | 5 | 0;
 
-type RatingPropsType = {
+export type RatingPropsType = {
     ratingValue: number
     callback: (ratingValue: ratingValueType) => void
 }
