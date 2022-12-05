@@ -1,5 +1,4 @@
 import {ChangeEvent, useRef, useState} from 'react';
-import {action} from '@storybook/addon-actions';
 
 
 export default {
@@ -19,7 +18,7 @@ export const TrackValueUncontrolledInput = () => {
     /> - {value} </>;
 };
 
-export const GetValueValueUncontrolledInput = () => {
+export const GetValueUncontrolledInput = () => {
     const [value, setValue] = useState('');
 
     const inputRef = useRef<HTMLInputElement>(null);
