@@ -36,7 +36,7 @@ function App() {
             {/*<Rating value={5}/>*/}
 
             {/*<UncontrolledOnnOff indicator={true}/>*/}
-            <ControlledOnnOff indicator={IsButtonControlled} callBack={setIsButtonControlled}/>
+            <ControlledOnnOffMemo indicator={IsButtonControlled} callBack={setIsButtonControlled}/>
             {/*<UncontrolledOnnOff indicator={false}/>*/}
             {/*<UncontrolledOnnOff indicator={false}/>*/}
 
@@ -53,5 +53,6 @@ function PageTitle(props: PageTitlePropsType) {
     );
 }
 
+const ControlledOnnOffMemo = React.memo(ControlledOnnOff);   //For every component
 
 export default App;

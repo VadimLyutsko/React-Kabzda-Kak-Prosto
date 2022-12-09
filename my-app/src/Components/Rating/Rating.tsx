@@ -15,21 +15,22 @@ type StarPropsType = {
 }
 
 
-export function Rating(props: RatingPropsType) {
+ function RatingMemo(props: RatingPropsType) {
 
     return (
         <div className={styles.Rating}>
-            <Star callback={props.callback} selected={props.ratingValue > 0} value ={1}/>
-            <Star callback={props.callback} selected={props.ratingValue > 1} value ={2}/>
-            <Star callback={props.callback} selected={props.ratingValue > 2} value ={3}/>
-            <Star callback={props.callback} selected={props.ratingValue > 3} value ={4}/>
-            <Star callback={props.callback} selected={props.ratingValue > 4} value ={5}/>
+            <StarMemo callback={props.callback} selected={props.ratingValue > 0} value ={1}/>
+            <StarMemo callback={props.callback} selected={props.ratingValue > 1} value ={2}/>
+            <StarMemo callback={props.callback} selected={props.ratingValue > 2} value ={3}/>
+            <StarMemo callback={props.callback} selected={props.ratingValue > 3} value ={4}/>
+            <StarMemo callback={props.callback} selected={props.ratingValue > 4} value ={5}/>
         </div>
     );
 }
 
 function Star(props: StarPropsType) {
     return <span onClick={()=>{props.callback(props.value)}}>{props.selected ? <b>star </b> : 'star '}</span>;
-
-
 }
+
+export const Rating = React.memo(RatingMemo)
+const StarMemo = React.memo(Star)
