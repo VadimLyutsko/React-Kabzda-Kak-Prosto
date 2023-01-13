@@ -52,29 +52,7 @@ export const SetTimeOutSimpleExample = () => {
 };
 
 
-export const Clock = () => {
 
-    const date = new Date;
-    const [hours, setHours] = useState(0);
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(+date.getSeconds());
-    useEffect(() => {
-        setHours(+date.getHours());
-        setMinutes(+date.getMinutes());
-        setTimeout(() => {
-            if (seconds < 60) {
-                setSeconds(state => state + 1);
-            } else {
-                setSeconds(1);
-            }
-        }, 1000);
-    }, [seconds]);
-
-
-    return <>
-        Hours: {hours} Minutes:{minutes} Seconds:{seconds}
-    </>;
-};
 
 
 
