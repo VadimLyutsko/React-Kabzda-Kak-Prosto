@@ -11,10 +11,11 @@ export const Clock: React.FC = () => {
     };
 
     return (
-        <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <button style={{marginBottom:'50px'}} onClick={clockToggleHandler}>Toggle clock style </button> <br/>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <button style={{marginBottom: '50px'}} onClick={clockToggleHandler}>Toggle clock style</button>
+            <br/>
             {
-                toggleClock  ? <AnalogClock/>  : <div style={{marginTop:'100px'}}><DigitalClock/></div>
+                toggleClock ? <AnalogClock/> : <div style={{marginTop: '100px'}}><DigitalClock/></div>
             }
         </div>
     );
@@ -78,8 +79,6 @@ export class AnalogClock extends Component {
         this.setState({secondRatio: secondRatio = currentDate.getSeconds() / 60});
         this.setState({minuteRatio: minuteRatio = (secondRatio + currentDate.getMinutes()) / 60});
         this.setState({hourRatio: hourRatio = (minuteRatio + currentDate.getHours()) / 12});
-
-
     };
 
 
@@ -89,7 +88,6 @@ export class AnalogClock extends Component {
             <ClockForAnalog secondRatio={secondRatio} minuteRatio={minuteRatio} hourRatio={hourRatio}/>
         );
     }
-
 }
 
 
@@ -101,9 +99,7 @@ type ClockType = {
 
 
 export function ClockForAnalog({hourRatio, minuteRatio, secondRatio}: ClockType) {
-
     console.log(secondRatio);
-
 
     return (
 
@@ -152,9 +148,7 @@ export function ClockForAnalog({hourRatio, minuteRatio, secondRatio}: ClockType)
                 <div>XII</div>
             </div>
         </div>
-
     );
-
 }
 
 
