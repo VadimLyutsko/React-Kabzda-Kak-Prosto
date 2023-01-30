@@ -11,10 +11,10 @@ export const Clock: React.FC = () => {
     };
 
     return (
-        <div>
+        <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <button style={{marginBottom:'50px'}} onClick={clockToggleHandler}>Toggle clock style </button> <br/>
             {
-                toggleClock  ? <AnalogClock/> : <DigitalClock/>
+                toggleClock  ? <AnalogClock/>  : <div style={{marginTop:'100px'}}><DigitalClock/></div>
             }
         </div>
     );
