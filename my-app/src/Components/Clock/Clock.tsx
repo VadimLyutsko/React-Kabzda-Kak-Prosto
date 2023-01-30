@@ -116,40 +116,40 @@ export function ClockForAnalog({hourRatio, minuteRatio, secondRatio}: ClockType)
                  style={{transform: `translate(-50%) rotate(${secondRatio * 360}deg)`}}></div>
 
             <div className={styles.number + ' ' + styles.number1}>
-                <div>1</div>
+                <div>I</div>
             </div>
             <div className={styles.number + ' ' + styles.number2}>
-                <div>2</div>
+                <div>II</div>
             </div>
             <div className={styles.number + ' ' + styles.number3}>
-                <div>3</div>
+                <div>III</div>
             </div>
             <div className={styles.number + ' ' + styles.number4}>
-                <div>4</div>
+                <div>IV</div>
             </div>
             <div className={styles.number + ' ' + styles.number5}>
-                <div>5</div>
+                <div>V</div>
             </div>
             <div className={styles.number + ' ' + styles.number6}>
-                <div>6</div>
+                <div>VI</div>
             </div>
             <div className={styles.number + ' ' + styles.number7}>
-                <div>7</div>
+                <div>VII</div>
             </div>
             <div className={styles.number + ' ' + styles.number8}>
-                <div>8</div>
+                <div>VIII</div>
             </div>
             <div className={styles.number + ' ' + styles.number9}>
-                <div>9</div>
+                <div>IX</div>
             </div>
             <div className={styles.number + ' ' + styles.number10}>
-                <div>10</div>
+                <div>X</div>
             </div>
             <div className={styles.number + ' ' + styles.number11}>
-                <div>11</div>
+                <div>XI</div>
             </div>
             <div className={styles.number + ' ' + styles.number12}>
-                <div>12</div>
+                <div>XII</div>
             </div>
         </div>
 
